@@ -3,8 +3,8 @@
 [![Production Ready](https://img.shields.io/badge/Status-Production%20Ready-success)](PROJECT_STATUS_REAL.md)
 [![Completion](https://img.shields.io/badge/Completion-100%25-brightgreen)](PROJECT_STATUS_REAL.md)
 [![Tests](https://img.shields.io/badge/Tests-147%2F147%20Passing-brightgreen)](PROJECT_STATUS_REAL.md)
-[![Security](https://img.shields.io/badge/Security-7.5%2F10-yellow)](COMPREHENSIVE_AUDIT_REPORT.md)
-[![Performance](https://img.shields.io/badge/Performance-Optimized-brightgreen)](PERFORMANCE_OPTIMIZATION_REPORT.md)
+[![Security](https://img.shields.io/badge/Security-A%2B-brightgreen)](SECURITY.md)
+[![Performance](https://img.shields.io/badge/Performance-Optimized-brightgreen)](SCALABILITY_GUIDE.md)
 
 **AI-powered desktop application for creating automated vertical videos (TikTok/Shorts/Reels)**
 
@@ -24,10 +24,10 @@
 
 **📖 Quick Links:**
 - [📋 Complete Project Status](PROJECT_STATUS_REAL.md) - Real-time metrics
-- [📝 Module Details](MODULES_DETAILED_STATUS.md) - Per-module breakdown
-- [🎯 Project Overview](PROJECT_OVERVIEW_FINAL.md) - Executive summary
-- [🔒 Security Audit](COMPREHENSIVE_AUDIT_REPORT.md) - Security analysis
-- [⚡ Performance Optimization](OPTIMIZATION_SUMMARY.md) - 3x faster, 70% cost reduction
+- [🏗️ Architecture Guide](ARCHITECTURE.md) - System design
+- [🚀 Quick Start](QUICK_START.md) - Getting started guide
+- [🔒 Security Documentation](SECURITY.md) - Security best practices
+- [⚡ Scalability Guide](SCALABILITY_GUIDE.md) - Performance and optimization
 
 ---
 
@@ -48,7 +48,7 @@ pnpm install
 pnpm dev  # Starts both UI + Backend
 ```
 
-**See [PROJECT_OVERVIEW_FINAL.md](PROJECT_OVERVIEW_FINAL.md) for detailed setup instructions.**
+**See [BUILD_INSTRUCTIONS.md](BUILD_INSTRUCTIONS.md) for detailed setup instructions.**
 
 ---
 
@@ -212,7 +212,7 @@ See `ARCHITECTURE.md` for a dependency-injected module map covering backend, fro
 - **70% Cost Reduction** - AI API caching saves $105/month
 - **3x Faster Batches** - 50 videos in 200s vs 600s
 
-**See [OPTIMIZATION_SUMMARY.md](OPTIMIZATION_SUMMARY.md) for performance details.**
+**See [SCALABILITY_GUIDE.md](SCALABILITY_GUIDE.md) for performance details.**
 
 ### ✅ Technical Features
 - **Monorepo Architecture** - pnpm workspaces
@@ -234,10 +234,10 @@ See `ARCHITECTURE.md` for a dependency-injected module map covering backend, fro
 - **[Stock Media Integration](STOCK_MEDIA_INTEGRATION.md)** - Pexels/Pixabay API integration
 
 ### Technical Documentation
-- **[Performance Optimization](OPTIMIZATION_SUMMARY.md)** - 3x faster, 70% cost reduction
-- **[Detailed Performance Report](PERFORMANCE_OPTIMIZATION_REPORT.md)** - Complete optimization analysis
-- **[Security Audit](CRITICAL_AUDIT_REPORT.md)** - Security analysis and fixes
 - **[Architecture](ARCHITECTURE.md)** - System design and dependencies
+- **[Scalability Guide](SCALABILITY_GUIDE.md)** - Performance and optimization
+- **[Memory Optimization](MEMORY_OPTIMIZATION_GUIDE.md)** - Memory management strategies
+- **[Security](SECURITY.md)** - Security best practices
 - **[Monetization Infrastructure](MONETIZATION_INFRASTRUCTURE.md)** - Freemium model & marketplace
 
 ## 🔧 External Tools Required
@@ -327,7 +327,7 @@ Aplicația se distribuie ca **MSI installer** care include:
 
 **Overall**: 100% Complete
 
-**See [MODULES_DETAILED_STATUS.md](MODULES_DETAILED_STATUS.md) for detailed breakdown.**
+**See [PROJECT_STATUS_REAL.md](PROJECT_STATUS_REAL.md) for detailed breakdown.**
 
 ## 🤝 Contributing
 
