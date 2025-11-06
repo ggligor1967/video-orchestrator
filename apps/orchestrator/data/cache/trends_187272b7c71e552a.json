@@ -1,0 +1,20 @@
+[
+  {
+    "id": "mock-horror-1",
+    "keyword": "haunted house stories",
+    "category": "horror",
+    "hashtags": [
+      "#hauntedhouse",
+      "#ghoststories",
+      "#horror",
+      "#paranormal"
+    ],
+    "score": 95,
+    "peakTime": "20:00-22:00",
+    "growthRate": 0.85,
+    "volume": 150000,
+    "source": "mock",
+    "region": "US",
+    "fetchedAt": "2025-11-06T00:42:11.637Z"
+  }
+]

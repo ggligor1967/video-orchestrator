@@ -1,0 +1,119 @@
+[
+  {
+    "key": "script_727fe7df765af6a0",
+    "path": "D:\\playground\\Aplicatia\\apps\\orchestrator\\data\\cache\\script_727fe7df765af6a0.json",
+    "timestamp": 1762389743765,
+    "lastAccess": 1762389743765,
+    "hits": 0,
+    "size": 1270,
+    "metadata": {
+      "type": "script",
+      "topic": "haunted mansion mystery",
+      "genre": "horror"
+    }
+  },
+  {
+    "key": "script_8369c4a2da92c8f5",
+    "path": "D:\\playground\\Aplicatia\\apps\\orchestrator\\data\\cache\\script_8369c4a2da92c8f5.json",
+    "timestamp": 1762389743825,
+    "lastAccess": 1762389743825,
+    "hits": 0,
+    "size": 1141,
+    "metadata": {
+      "type": "script",
+      "topic": "test story",
+      "genre": "horror"
+    }
+  },
+  {
+    "key": "script_bca01479ebb751bb",
+    "path": "D:\\playground\\Aplicatia\\apps\\orchestrator\\data\\cache\\script_bca01479ebb751bb.json",
+    "timestamp": 1762389743842,
+    "lastAccess": 1762389743842,
+    "hits": 0,
+    "size": 1144,
+    "metadata": {
+      "type": "script",
+      "topic": "test story",
+      "genre": "mystery"
+    }
+  },
+  {
+    "key": "script_4eca0b8900c504ea",
+    "path": "D:\\playground\\Aplicatia\\apps\\orchestrator\\data\\cache\\script_4eca0b8900c504ea.json",
+    "timestamp": 1762389743855,
+    "lastAccess": 1762389743855,
+    "hits": 0,
+    "size": 1153,
+    "metadata": {
+      "type": "script",
+      "topic": "test story",
+      "genre": "paranormal"
+    }
+  },
+  {
+    "key": "script_407a074dbeca2c83",
+    "path": "D:\\playground\\Aplicatia\\apps\\orchestrator\\data\\cache\\script_407a074dbeca2c83.json",
+    "timestamp": 1762389743867,
+    "lastAccess": 1762389743867,
+    "hits": 0,
+    "size": 1153,
+    "metadata": {
+      "type": "script",
+      "topic": "test story",
+      "genre": "true crime"
+    }
+  },
+  {
+    "key": "script_eced46a3051f2f22",
+    "path": "D:\\playground\\Aplicatia\\apps\\orchestrator\\data\\cache\\script_eced46a3051f2f22.json",
+    "timestamp": 1762389743885,
+    "lastAccess": 1762389743885,
+    "hits": 0,
+    "size": 1151,
+    "metadata": {
+      "type": "script",
+      "topic": "ghost story",
+      "genre": "horror"
+    }
+  },
+  {
+    "key": "script_539b2d2cc11f4282",
+    "path": "D:\\playground\\Aplicatia\\apps\\orchestrator\\data\\cache\\script_539b2d2cc11f4282.json",
+    "timestamp": 1762389743903,
+    "lastAccess": 1762389743903,
+    "hits": 0,
+    "size": 1284,
+    "metadata": {
+      "type": "script",
+      "topic": "mysterious disappearance",
+      "genre": "mystery"
+    }
+  },
+  {
+    "key": "script_69825188fc7db987",
+    "path": "D:\\playground\\Aplicatia\\apps\\orchestrator\\data\\cache\\script_69825188fc7db987.json",
+    "timestamp": 1762389743919,
+    "lastAccess": 1762389743919,
+    "hits": 0,
+    "size": 1293,
+    "metadata": {
+      "type": "script",
+      "topic": "paranormal investigation",
+      "genre": "paranormal"
+    }
+  },
+  {
+    "key": "script_f4564908f6d42183",
+    "path": "D:\\playground\\Aplicatia\\apps\\orchestrator\\data\\cache\\script_f4564908f6d42183.json",
+    "timestamp": 1762389743934,
+    "lastAccess": 1762389743934,
+    "hits": 0,
+    "size": 1544,
+    "metadata": {
+      "type": "script",
+      "topic": "The Haunted House on \"Elm Street\" & other stories",
+      "genre": "horror"
+    }
+  }
+]

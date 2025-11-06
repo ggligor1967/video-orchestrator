@@ -1,0 +1,102 @@
+# Environment variables
+.env
+.env.local
+.env.development
+.env.production
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+target/
+apps/ui/.svelte-kit/
+
+# Tauri specific
+src-tauri/target/
+apps/ui/src-tauri/target/
+
+# Cache directories
+data/cache/
+.cache/
+.vite/
+
+# Logs
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+data/tts/*.wav
+
+# Media processing files
+data/cache/*
+!data/cache/.gitkeep
+data/exports/
+data/assets/backgrounds/
+data/assets/music/
+data/brands/
+
+# Tool binaries (download separately)
+tools/ffmpeg/*.exe
+tools/ffmpeg/*.dll
+tools/ffmpeg/ffmpeg-master-latest-win64-gpl/
+tools/piper/*.exe
+tools/piper/*.dll
+tools/piper/models/
+tools/whisper/*.exe
+tools/whisper/*.dll
+tools/whisper/models/
+tools/godot/*.exe
+tools/godot/projects/
+
+# Bundled resources (generated during build)
+apps/ui/src-tauri/resources/tools/
+
+# Test outputs
+coverage/
+test-results/
+playwright-report/
+lint-output*.txt
+
+# Package manager
+yarn.lock
+package-lock.json
+.early.coverage
+
+# Large downloads
+ffmpeg-master-latest-win64-gpl/
+WiX Toolset/
+
+# Status and temporary docs
+*.txt
+!README.txt
+commit-message.txt
+test_results.txt
+
+# MCP config
+.mcp.json
+.claude/
+
+# Backup files
+*.bak
+*.backup

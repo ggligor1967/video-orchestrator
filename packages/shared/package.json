@@ -1,0 +1,26 @@
+{
+  "name": "@video-orchestrator/shared",
+  "version": "1.0.0",
+  "description": "Shared types, schemas, and utilities for Video Orchestrator",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "clean": "rimraf dist"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.9.2",
+    "rimraf": "^6.1.0",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "zod": "^4.1.12"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  }
+}

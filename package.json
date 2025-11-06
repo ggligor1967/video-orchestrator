@@ -1,0 +1,44 @@
+{
+  "name": "video-orchestrator",
+  "version": "1.0.0",
+  "description": "AI-powered desktop application for creating automated vertical videos",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter @app/orchestrator dev\" \"pnpm --filter @app/ui dev\"",
+    "build": "pnpm --filter @video-orchestrator/shared build && pnpm --filter @app/orchestrator build && pnpm --filter @app/ui build",
+    "start": "pnpm --filter @app/orchestrator start",
+    "test:all": "pnpm test:unit && pnpm test:integration && pnpm test:e2e:api",
+    "test:unit": "pnpm --filter @app/orchestrator test",
+    "test:integration": "vitest run tests/integration",
+    "test:e2e:api": "vitest run tests/e2e",
+    "test:e2e:ui": "pnpm --filter @app/ui test:e2e",
+    "lint": "pnpm --filter @app/orchestrator lint && pnpm --filter @app/ui lint",
+    "lint:fix": "pnpm --filter @app/orchestrator lint:fix && pnpm --filter @app/ui lint:fix",
+    "tauri": "pnpm --filter @app/ui tauri",
+    "tauri:build": "pnpm --filter @app/ui tauri:build",
+    "msi:diagnose": "powershell -ExecutionPolicy Bypass -File scripts/check-cargo-cache.ps1",
+    "msi:prepare": "powershell -ExecutionPolicy Bypass -File scripts/cargo-offline-build.ps1 -PrepareVendor",
+    "msi:build": "powershell -ExecutionPolicy Bypass -File scripts/cargo-offline-build.ps1 -BuildOffline",
+    "msi:build:full": "powershell -ExecutionPolicy Bypass -File scripts/cargo-offline-build.ps1 -FullBuild",
+    "clean": "rimraf node_modules apps/*/node_modules packages/*/node_modules",
+    "setup:tools": "node scripts/setupTools.js",
+    "health:check": "node scripts/healthCheck.js"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.7",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "dependencies": {
+    "@types/fluent-ffmpeg": "^2.1.28",
+    "fluent-ffmpeg": "^2.1.3"
+  }
+}

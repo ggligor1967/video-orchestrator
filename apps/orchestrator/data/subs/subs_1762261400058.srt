@@ -1,0 +1,28 @@
+1
+00:00:00,000 --> 00:00:03,000
+This is a mock subtitle generated
+
+2
+00:00:03,000 --> 00:00:06,000
+for audio file test-audio-for-subs.wav
+
+3
+00:00:06,000 --> 00:00:10,000
+Real subtitles would be generated using Whisper
+
+4
+00:00:10,000 --> 00:00:15,000
+with proper speech recognition and timing
+
+5
+00:00:15,000 --> 00:00:20,000
+The system supports multiple languages
+
+6
+00:00:20,000 --> 00:00:25,000
+and various subtitle formats like SRT and ASS
+
+7
+00:00:25,000 --> 00:00:30,000
+Perfect for vertical video content creation
+

@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    // 🔹 Teste unitare backend + UI
+    "test:unit": "vitest run --dir tests/unit",
+
+    // 🔹 Teste de integrare API
+    "test:integration": "vitest run --dir tests/integration",
+
+    // 🔹 Teste E2E UI cu Playwright
+    "test:e2e:ui": "playwright test tests/e2e/pipeline-ui.spec.js",
+
+    // 🔹 Teste E2E CLI
+    "test:e2e:cli": "vitest run tests/e2e/pipeline-cli.test.js",
+
+    // 🔹 Validare media (ffprobe)
+    "test:media": "vitest run --dir tests/media-validation",
+
+    // 🔹 Rulează tot (unit + integration + E2E + media)
+    "test:all": "pnpm test:unit && pnpm test:integration && pnpm test:e2e:cli && pnpm test:e2e:ui && pnpm test:media",
+
+    // 🔹 Rulează rapid doar testele critice înainte de release
+    "test:release": "pnpm test:unit && pnpm test:integration && pnpm test:media"
+  },
+  "devDependencies": {
+    "vitest": "^1.0.0",
+    "supertest": "^6.3.3",
+    "@playwright/test": "^1.40.0"
+  }
+}

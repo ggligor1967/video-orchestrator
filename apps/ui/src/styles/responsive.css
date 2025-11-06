@@ -1,0 +1,491 @@
+/**
+ * responsive.css - Responsive utilities for Video Orchestrator
+ * Mobile-first approach with touch, mouse, and keyboard support
+ */
+
+/* ===== TOUCH OPTIMIZATIONS ===== */
+
+/* Increase touch target size for better mobile UX */
+.touch-target {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 12px;
+}
+
+/* Disable text selection for UI elements */
+.no-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Touch feedback */
+.touch-feedback {
+  position: relative;
+  overflow: hidden;
+}
+
+.touch-feedback::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.6s,
+    height 0.6s;
+}
+
+.touch-feedback:active::after {
+  width: 200px;
+  height: 200px;
+}
+
+/* Prevent pull-to-refresh on mobile */
+body {
+  overscroll-behavior: contain;
+}
+
+/* ===== MOUSE OPTIMIZATIONS ===== */
+
+/* Custom cursor for interactive elements */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-grab {
+  cursor: grab;
+}
+
+.cursor-grabbing {
+  cursor: grabbing;
+}
+
+/* Hover states (only on devices with hover capability) */
+@media (hover: hover) {
+  .hover-effect:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .hover-opacity:hover {
+    opacity: 0.8;
+  }
+
+  .hover-shadow:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
+
+/* ===== KEYBOARD NAVIGATION ===== */
+
+/* Focus visible only for keyboard navigation */
+.focus-visible:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Skip navigation for accessibility */
+.skip-nav {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--primary-color);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 0 0 4px 0;
+  z-index: 100;
+}
+
+.skip-nav:focus {
+  top: 0;
+}
+
+/* Keyboard navigation indicators */
+.kbd-indicator {
+  display: inline-block;
+  padding: 2px 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  font-size: 11px;
+  font-family: monospace;
+  margin-left: 8px;
+}
+
+/* ===== RESPONSIVE BREAKPOINTS ===== */
+
+/* Mobile First: Default styles for mobile */
+:root {
+  --spacing-unit: 8px;
+  --container-padding: 16px;
+  --card-gap: 12px;
+}
+
+/* Small tablets (portrait) */
+@media (min-width: 640px) {
+  :root {
+    --container-padding: 24px;
+    --card-gap: 16px;
+  }
+}
+
+/* Tablets (landscape) and small laptops */
+@media (min-width: 768px) {
+  :root {
+    --container-padding: 32px;
+    --card-gap: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 40px;
+    --card-gap: 24px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1280px) {
+  :root {
+    --container-padding: 48px;
+    --card-gap: 28px;
+  }
+}
+
+/* ===== RESPONSIVE CONTAINERS ===== */
+
+.container-responsive {
+  width: 100%;
+  padding: 0 var(--container-padding);
+  margin: 0 auto;
+}
+
+@media (min-width: 640px) {
+  .container-responsive {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-responsive {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-responsive {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-responsive {
+    max-width: 1280px;
+  }
+}
+
+/* ===== RESPONSIVE GRID ===== */
+
+.grid-responsive {
+  display: grid;
+  gap: var(--card-gap);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 640px) {
+  .grid-responsive {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid-responsive {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .grid-responsive {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ===== RESPONSIVE TYPOGRAPHY ===== */
+
+.text-responsive-xs {
+  font-size: 0.75rem;
+}
+
+.text-responsive-sm {
+  font-size: 0.875rem;
+}
+
+.text-responsive-base {
+  font-size: 1rem;
+}
+
+.text-responsive-lg {
+  font-size: 1rem;
+}
+
+.text-responsive-xl {
+  font-size: 1.125rem;
+}
+
+.text-responsive-2xl {
+  font-size: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .text-responsive-lg {
+    font-size: 1.125rem;
+  }
+
+  .text-responsive-xl {
+    font-size: 1.25rem;
+  }
+
+  .text-responsive-2xl {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text-responsive-xl {
+    font-size: 1.5rem;
+  }
+
+  .text-responsive-2xl {
+    font-size: 1.875rem;
+  }
+}
+
+/* ===== RESPONSIVE SPACING ===== */
+
+.spacing-responsive-sm {
+  padding: calc(var(--spacing-unit) * 1);
+}
+
+.spacing-responsive-md {
+  padding: calc(var(--spacing-unit) * 2);
+}
+
+.spacing-responsive-lg {
+  padding: calc(var(--spacing-unit) * 3);
+}
+
+@media (min-width: 768px) {
+  .spacing-responsive-sm {
+    padding: calc(var(--spacing-unit) * 1.5);
+  }
+
+  .spacing-responsive-md {
+    padding: calc(var(--spacing-unit) * 3);
+  }
+
+  .spacing-responsive-lg {
+    padding: calc(var(--spacing-unit) * 4);
+  }
+}
+
+/* ===== MOBILE-SPECIFIC ===== */
+
+@media (max-width: 639px) {
+  /* Stack elements vertically on mobile */
+  .mobile-stack {
+    flex-direction: column !important;
+  }
+
+  /* Full width buttons on mobile */
+  .mobile-full-width {
+    width: 100% !important;
+  }
+
+  /* Hide on mobile */
+  .hide-mobile {
+    display: none !important;
+  }
+
+  /* Reduce padding on mobile */
+  .mobile-compact {
+    padding: 8px !important;
+  }
+
+  /* Smaller text on mobile */
+  .mobile-text-sm {
+    font-size: 0.875rem !important;
+  }
+}
+
+/* ===== TABLET-SPECIFIC ===== */
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  .hide-tablet {
+    display: none !important;
+  }
+
+  .show-tablet {
+    display: block !important;
+  }
+}
+
+/* ===== DESKTOP-SPECIFIC ===== */
+
+@media (min-width: 1024px) {
+  .hide-desktop {
+    display: none !important;
+  }
+
+  .show-desktop {
+    display: block !important;
+  }
+}
+
+/* ===== ORIENTATION-SPECIFIC ===== */
+
+@media (orientation: portrait) {
+  .portrait-stack {
+    flex-direction: column !important;
+  }
+
+  .hide-portrait {
+    display: none !important;
+  }
+}
+
+@media (orientation: landscape) {
+  .landscape-row {
+    flex-direction: row !important;
+  }
+
+  .hide-landscape {
+    display: none !important;
+  }
+}
+
+/* ===== HIGH DPI DISPLAYS ===== */
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper borders on retina displays */
+  .border-sharp {
+    border-width: 0.5px;
+  }
+}
+
+/* ===== SAFE AREAS (for notched devices) ===== */
+
+.safe-area-inset {
+  padding-top: env(safe-area-inset-top);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+}
+
+.safe-area-inset-top {
+  padding-top: env(safe-area-inset-top);
+}
+
+.safe-area-inset-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* ===== ACCESSIBILITY ===== */
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn-primary {
+    border: 2px solid white;
+  }
+
+  .border-subtle {
+    border-width: 2px !important;
+  }
+}
+
+/* Dark mode support (beyond default) */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-invert {
+    filter: invert(1) hue-rotate(180deg);
+  }
+}
+
+/* ===== PRINT STYLES ===== */
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .print-break-before {
+    page-break-before: always;
+  }
+
+  .print-break-after {
+    page-break-after: always;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* ===== UTILITY CLASSES ===== */
+
+/* Show/hide utilities */
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+/* Visibility utilities */
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+/* Overflow utilities */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+/* Scroll snap utilities (for touch swipe) */
+.scroll-snap-x {
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-snap-child {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* Smooth scrolling */
+.smooth-scroll {
+  scroll-behavior: smooth;
+}

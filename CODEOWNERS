@@ -1,0 +1,33 @@
+# Code Owners for Video Orchestrator
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owners - these users will be requested for review when anyone opens a pull request
+* @YOUR_USERNAME
+
+# Backend code
+/apps/orchestrator/ @YOUR_USERNAME
+/packages/shared/ @YOUR_USERNAME
+
+# Frontend code
+/apps/ui/ @YOUR_USERNAME
+
+# Configuration files
+/.github/ @YOUR_USERNAME
+/scripts/ @YOUR_USERNAME
+*.json @YOUR_USERNAME
+*.yml @YOUR_USERNAME
+*.yaml @YOUR_USERNAME
+
+# Documentation
+*.md @YOUR_USERNAME
+/docs/ @YOUR_USERNAME
+
+# Security-sensitive files
+SECURITY.md @YOUR_USERNAME
+/.github/workflows/ @YOUR_USERNAME
+
+# Build and deployment
+/scripts/build-msi.ps1 @YOUR_USERNAME
+/scripts/cargo-offline-build.ps1 @YOUR_USERNAME
+Cargo.toml @YOUR_USERNAME
+tauri.conf.json @YOUR_USERNAME

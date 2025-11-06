@@ -1,0 +1,118 @@
+name: Deploy Documentation to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build documentation
+        run: |
+          # Create docs directory if it doesn't exist
+          mkdir -p docs
+
+          # Generate API documentation if available
+          if [ -f "apps/orchestrator/package.json" ]; then
+            cd apps/orchestrator
+            # Add documentation generation commands here if available
+            cd ../..
+          fi
+
+          # Copy README and other docs to docs folder
+          cp README.md docs/index.md
+          cp CHANGELOG.md docs/changelog.md
+          cp ARCHITECTURE.md docs/architecture.md
+          cp BUILD_INSTRUCTIONS.md docs/build-instructions.md
+          cp API.md docs/api.md
+
+          # Create docs index
+          cat > docs/README.md << 'EOF'
+          # Video Orchestrator Documentation
+
+          Welcome to the Video Orchestrator documentation!
+
+          ## Getting Started
+
+          - [Installation & Setup](build-instructions.md)
+          - [Architecture Overview](architecture.md)
+          - [API Reference](api.md)
+
+          ## Development
+
+          - [Contributing Guide](../CONTRIBUTING.md)
+          - [Code of Conduct](../CODE_OF_CONDUCT.md)
+          - [Changelog](changelog.md)
+
+          ## Features
+
+          - AI-powered script generation
+          - Automated video editing pipeline
+          - Multi-format export support
+          - Real-time preview and collaboration
+
+          ## Support
+
+          - [Report Issues](https://github.com/${{ github.repository }}/issues)
+          - [Discussions](https://github.com/${{ github.repository }}/discussions)
+          EOF
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./docs
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

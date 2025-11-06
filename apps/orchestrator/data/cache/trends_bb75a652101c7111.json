@@ -1,0 +1,38 @@
+[
+  {
+    "id": "mock-horror-1",
+    "keyword": "haunted house stories",
+    "category": "horror",
+    "hashtags": [
+      "#hauntedhouse",
+      "#ghoststories",
+      "#horror",
+      "#paranormal"
+    ],
+    "score": 95,
+    "peakTime": "20:00-22:00",
+    "growthRate": 0.85,
+    "volume": 150000,
+    "source": "mock",
+    "region": "US",
+    "fetchedAt": "2025-11-06T00:42:11.603Z"
+  },
+  {
+    "id": "mock-horror-2",
+    "keyword": "urban legends",
+    "category": "horror",
+    "hashtags": [
+      "#urbanlegends",
+      "#creepypasta",
+      "#scarystories",
+      "#legend"
+    ],
+    "score": 88,
+    "peakTime": "19:00-21:00",
+    "growthRate": 0.78,
+    "volume": 120000,
+    "source": "mock",
+    "region": "US",
+    "fetchedAt": "2025-11-06T00:42:11.606Z"
+  }
+]

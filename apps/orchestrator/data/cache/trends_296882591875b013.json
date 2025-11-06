@@ -1,0 +1,20 @@
+[
+  {
+    "id": "mock-mystery-1",
+    "keyword": "unsolved cases",
+    "category": "mystery",
+    "hashtags": [
+      "#unsolved",
+      "#mystery",
+      "#detective",
+      "#truecrime"
+    ],
+    "score": 92,
+    "peakTime": "18:00-20:00",
+    "growthRate": 0.82,
+    "volume": 135000,
+    "source": "mock",
+    "region": "US",
+    "fetchedAt": "2025-11-06T00:42:11.629Z"
+  }
+]

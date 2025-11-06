@@ -1,0 +1,43 @@
+# Optimized Cargo Configuration
+# Reduces network dependency and improves build reliability
+
+# Network retry configuration
+[net]
+retry = 5
+git-fetch-with-cli = true
+
+# Registry configuration with fallbacks
+[registries.crates-io]
+index = "sparse+https://index.crates.io/"
+
+# HTTP configuration
+[http]
+check-revoke = false
+timeout = 30
+
+# Build configuration
+[build]
+jobs = 4
+incremental = true
+
+# Target configuration for Windows
+[target.x86_64-pc-windows-msvc]
+linker = "link.exe"
+
+# Optimize compilation
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true
+split-debuginfo = "unpacked"
+
+# Term configuration
+[term]
+verbose = false
+color = "auto"

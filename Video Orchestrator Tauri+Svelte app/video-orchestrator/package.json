@@ -1,0 +1,27 @@
+{
+  "name": "video-orchestrator",
+  "version": "1.0.0",
+  "description": "A video orchestrator application built with Svelte and Tauri.",
+  "main": "src/App.svelte",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "svelte": "^3.44.0",
+    "tauri": "^1.0.0"
+  },
+  "devDependencies": {
+    "vite": "^2.6.0",
+    "svelte-preprocess": "^4.0.0"
+  },
+  "keywords": [
+    "video",
+    "orchestrator",
+    "svelte",
+    "tauri"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}

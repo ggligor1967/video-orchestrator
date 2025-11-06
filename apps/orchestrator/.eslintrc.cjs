@@ -1,0 +1,16 @@
+module.exports = {
+  root: true,
+  env: {
+    node: true,
+    es2022: true
+  },
+  extends: ['eslint:recommended', 'prettier'],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module'
+  },
+  ignorePatterns: ['dist/', 'build/', 'node_modules/'],
+  rules: {
+    'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }]
+  }
+};
