@@ -1,0 +1,31 @@
+[
+  {
+    "type": "images",
+    "media_files": [
+      "examples/test_media/test_image_1.jpg",
+      "examples/test_media/test_image_2.jpg",
+      "examples/test_media/test_image_3.jpg"
+    ],
+    "audio_file": null,
+    "output_name": "slideshow_video_1",
+    "codec": "libx264",
+    "bitrate": "4000k",
+    "duration_per_image": 3.0,
+    "transitions": true,
+    "fill_mode": "fit"
+  },
+  {
+    "type": "images",
+    "media_files": [
+      "examples/test_media/test_image_4.jpg",
+      "examples/test_media/test_image_5.jpg"
+    ],
+    "audio_file": null,
+    "output_name": "slideshow_video_2",
+    "codec": "libx264",
+    "bitrate": "8000k",
+    "duration_per_image": 5.0,
+    "transitions": true,
+    "fill_mode": "fit"
+  }
+]
